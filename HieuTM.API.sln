@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HieuTM.API.B1", "HieuTM.API.B1\HieuTM.API.B1.csproj", "{956BEC74-CAC5-45B1-8C44-695735635FD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{956BEC74-CAC5-45B1-8C44-695735635FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{956BEC74-CAC5-45B1-8C44-695735635FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{956BEC74-CAC5-45B1-8C44-695735635FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{956BEC74-CAC5-45B1-8C44-695735635FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE4125B2-BEE5-4E8F-AB22-555E1F2E647B}
+	EndGlobalSection
+EndGlobal
