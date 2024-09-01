@@ -9,7 +9,10 @@ namespace HieuTM.API.B1.Controllers
     {
         public ValidationsController()
         {
+            ForValidation forValidation = new ForValidation();
 
+            forValidation.Amount = 100;
+            forValidation.Name = "Name";
         }
 
         [HttpPost]
