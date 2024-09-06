@@ -1,4 +1,5 @@
-﻿using HieuTM.API.B1.Entities;
+﻿using AutoMapper;
+using HieuTM.API.B1.Entities;
 using HieuTM.API.B1.ViewModels.SinhViens;
 
 namespace HieuTM.API.B1.Services
@@ -18,16 +19,24 @@ namespace HieuTM.API.B1.Services
                 Id = 2,
                 FullName = "GiangNLH",
                 DOB = new DateTime(2003,6,9)
+            },
+            new SinhVien()
+            {
+                Id = 3,
+                FullName = "        ",
+                DOB = new DateTime(2020,6,9)
             }
         };
 
         private readonly ILogger<SinhVienService> _logger;
+        private readonly IMapper _mapper;
 
         public SinhVienService(
-            ILogger<SinhVienService> logger
-        )
+            ILogger<SinhVienService> logger,
+            IMapper mapper)
         {
             _logger = logger;
+            _mapper = mapper;
         }
 
         public List<SinhVienVM> GetList()
@@ -43,7 +52,7 @@ namespace HieuTM.API.B1.Services
             var entity = _listSinhVien.FirstOrDefault(e => e.Id == id);
 
             // Map SinhVien -> SinhVienVM
-            SinhVienVM vm = new();
+            SinhVienVM vm = _mapper.Map<SinhVienVM>(entity);
 
             return vm;
         }
