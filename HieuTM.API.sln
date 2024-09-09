@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HieuTM.API.B1", "HieuTM.API.B1\HieuTM.API.B1.csproj", "{956BEC74-CAC5-45B1-8C44-695735635FD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HieuTM.API.B1", "HieuTM.API.B1\HieuTM.API.B1.csproj", "{956BEC74-CAC5-45B1-8C44-695735635FD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HieuTM.ConsoleUI", "HieuTM.FE.Console\HieuTM.ConsoleUI.csproj", "{E247DF93-3BB8-4EC2-8A3D-43A851E731DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{956BEC74-CAC5-45B1-8C44-695735635FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{956BEC74-CAC5-45B1-8C44-695735635FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{956BEC74-CAC5-45B1-8C44-695735635FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E247DF93-3BB8-4EC2-8A3D-43A851E731DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E247DF93-3BB8-4EC2-8A3D-43A851E731DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E247DF93-3BB8-4EC2-8A3D-43A851E731DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E247DF93-3BB8-4EC2-8A3D-43A851E731DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

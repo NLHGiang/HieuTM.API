@@ -1,4 +1,4 @@
-﻿using HieuTM.API.B1.Entities;
+﻿using HieuTM.API.B1.Data;
 using HieuTM.API.B1.Extensions;
 using Microsoft.EntityFrameworkCore;
 

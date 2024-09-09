@@ -42,7 +42,7 @@ namespace HieuTM.API.B1.Services
         public List<SinhVienVM> GetList()
         {
             // Map List<SinhVien> -> List<SinhVienVM>
-            List<SinhVienVM> vms = new();
+            List<SinhVienVM> vms = _mapper.Map<List<SinhVienVM>>(_listSinhVien);
 
             return vms;
         }
