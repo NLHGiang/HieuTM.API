@@ -4,19 +4,32 @@ using System.Text;
 
 namespace HieuTM.ConsoleUI.UI
 {
+    internal class HttpClientSingleton
+    {
+        private static readonly HttpClient _instance = new HttpClient();
+
+        static HttpClientSingleton()
+        {
+        }
+
+        public static HttpClient Instance => _instance;
+    }
+
     internal class SinhVienUIService
     {
         string baseUrl = "https://localhost:7283/";
+
         public async Task Get()
         {
-            HttpClient clientGet = new();
             string urlGet = $"{baseUrl}api/SinhViens";
-            HttpResponseMessage response = await clientGet.GetAsync(urlGet);
+            HttpResponseMessage response = await HttpClientSingleton.Instance.GetAsync(urlGet);
 
             //response.EnsureSuccessStatusCode();
             if (!response.IsSuccessStatusCode)
             {
                 Console.WriteLine("[" + (int)response.StatusCode + "] " + response.StatusCode);
+
+                return;
             }
 
             // Get data response
@@ -28,23 +41,19 @@ namespace HieuTM.ConsoleUI.UI
             {
                 vm.Show();
             }
-
-            clientGet.Dispose();
         }
 
         public async Task Post()
         {
-            HttpClient clientPost = new();
             string urlGet = $"{baseUrl}api/SinhViens";
             SinhVienCreateVM vm = new();
 
             string jsonRequest = JsonConvert.SerializeObject(vm);
             HttpContent content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
-            HttpResponseMessage response = await clientPost.PostAsync(urlGet, content);
+            HttpResponseMessage response = await HttpClientSingleton.Instance.PostAsync(urlGet, content);
 
             Console.WriteLine("[" + (int)response.StatusCode + "] " + response.StatusCode);
-            clientPost.Dispose();
         }
     }
 }

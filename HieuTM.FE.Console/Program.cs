@@ -19,6 +19,4 @@ while (true)
         default:
             break;
     }
-
-    Console.ReadKey();
 }
